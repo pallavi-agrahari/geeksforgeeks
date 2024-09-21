@@ -41,21 +41,34 @@ class Solution
   static void insert(int arr[],int i)
   {
        // Your code here
-       for(i=0;i<arr.length;i++){
-           int j=i;
-           while(j>0 && arr[j-1]>arr[j]){
-               int temp=arr[j];
-               arr[j]=arr[j-1];
-               arr[j-1]=temp;
-               j--;
-           }
-       }
-       return;
+    //   for(i=0;i<arr.length;i++){
+    //       int j=i;
+    //       while(j>0 && arr[j-1]>arr[j]){
+    //           int temp=arr[j];
+    //           arr[j]=arr[j-1];
+    //           arr[j-1]=temp;
+    //           j--;
+    //       }
+    //   }
+    //   return;
+    int count=0;
+     for(i=1;i<arr.length;i++){
+         
+          if(arr[i]<arr[i-1]){
+              int temp=arr[i];
+              arr[i]=arr[i-1];
+              arr[i-1]=temp;
+              count++;
+          }
+      }
+      if(count==0) return;
+      insert(arr,i+1);
+     
   }
   //Function to sort the array using insertion sort algorithm.
   public void insertionSort(int arr[], int n)
   {
       //code here
-      insert(arr,n);
+      insert(arr,0);
   }
 }
