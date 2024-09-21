@@ -40,16 +40,14 @@ class GFG {
 class Geeks {
 	 static void printTable (int n) 
 	 {
-            int multiplier=10;
-            while(multiplier>0)
-            {
-                //Your code here
-                System.out.print(n*multiplier+" ");
-                multiplier--;
-                
-            }
-           System.out.println();
-            
+         int mul=10;
+         while(mul>0){
+             System.out.print(n*mul+" ");
+            //  n--;
+             mul--;
+         }
+         System.out.println();
 	 }
+	 
 
 }
