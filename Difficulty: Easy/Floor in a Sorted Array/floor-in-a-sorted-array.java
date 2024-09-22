@@ -35,9 +35,9 @@ class Solution {
     // arr: input array
     // n is the size of array
     static int findFloor(long arr[], int n, long x) {
+        int ans=-1;
         int low=0;
         int high=n-1;
-        int ans=-1;
         while(low<=high){
             int mid=(low+high)/2;
             if(arr[mid]<=x){
